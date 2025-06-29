@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <title>Privat Läkarmottagning</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1588776814546-b04f8e6619d9') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.95);
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #007acc;
+        }
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Välkommen till Vår Läkarmottagning</h1>
+        <p>Fyll i formuläret nedan för att boka ett läkarbesök. Vi kontaktar dig så snart som möjligt.</p>
+        <form action="https://formsubmit.co/your-email@example.com" method="POST">
+            <label for="name">Fullständigt namn:</label>
+            <input type="text" id="name" name="Namn" required>
+
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="E-post" required>
+
+            <label for="phone">Telefonnummer:</label>
+            <input type="tel" id="phone" name="Telefon" required>
+
+            <label for="date">Önskat datum:</label>
+            <input type="date" id="date" name="Datum" required>
+
+            <label for="service">Typ av besök:</label>
+            <select id="service" name="Tjänst" required>
+                <option value="">-- Välj --</option>
+                <option value="Allmän undersökning">Allmän undersökning</option>
+                <option value="Vaccination">Vaccination</option>
+                <option value="Hälsokontroll">Hälsokontroll</option>
+                <option value="Receptförnyelse">Receptförnyelse</option>
+            </select>
+
+            <label for="message">Ytterligare information:</label>
+            <textarea id="message" name="Meddelande" rows="4" placeholder="Beskriv dina symptom eller önskemål..."></textarea>
+
+            <button type="submit">Boka tid</button>
+        </form>
+    </div>
+</body>
+</html>
